@@ -11,6 +11,8 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    var annotationsArray = [MKPointAnnotation]()
+    
     let mapView: MKMapView = {
        let mapView = MKMapView()
         mapView.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
     @objc private func didTapAddAddressButton(){
         alertAddAddress(title: "Add Address",
                         placeholder: "Enter the address") { text in
-            print(text)
+            self.setupPlacemark(addressPlace: text)
         }
      
       //  AlertError(title: "Error", message: "Server not used")
@@ -78,6 +80,39 @@ class ViewController: UIViewController {
     
     @objc private func didTapResetButton(){
         print("reset")
+    }
+    
+    private func setupPlacemark(addressPlace: String){
+        let geocoder = CLGeocoder() //core location adresi coğrafi kordinatlara dönüştürme
+        geocoder.geocodeAddressString(addressPlace) {[self] placemarks, error in
+            if let error = error {
+                print(error)
+                AlertError(title: "Error", message: "The server is unavailable. Try adding the address again")
+                return
+            }
+            
+            guard let placemarks = placemarks else{
+                return
+            }
+            let placemark = placemarks.first
+            
+            let annotation = MKPointAnnotation() // mapkit haritaya yer işaretleri ekleme
+            annotation.title = "\(addressPlace)"
+            
+            guard let placemarkLocation = placemark?.location else {
+                return
+            }
+            annotation.coordinate = placemarkLocation.coordinate
+            
+            annotationsArray.append(annotation)
+            
+            if annotationsArray.count > 2 {
+                routeButton.isHidden = false
+                resetButton.isHidden = false
+            }
+            
+            mapView.showAnnotations(annotationsArray, animated: true)
+        }
     }
     
     private func addConstraints(){
