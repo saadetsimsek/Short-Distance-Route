@@ -16,6 +16,7 @@
 		6A0185662C5E838500E64875 /* ShortDistanceRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0185652C5E838500E64875 /* ShortDistanceRouteTests.swift */; };
 		6A0185702C5E838500E64875 /* ShortDistanceRouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A01856F2C5E838500E64875 /* ShortDistanceRouteUITests.swift */; };
 		6A0185722C5E838500E64875 /* ShortDistanceRouteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0185712C5E838500E64875 /* ShortDistanceRouteUITestsLaunchTests.swift */; };
+		6AD193072C5F8FF1006B55A4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD193062C5F8FF1006B55A4 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6A01856B2C5E838500E64875 /* ShortDistanceRouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortDistanceRouteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A01856F2C5E838500E64875 /* ShortDistanceRouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDistanceRouteUITests.swift; sourceTree = "<group>"; };
 		6A0185712C5E838500E64875 /* ShortDistanceRouteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortDistanceRouteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6AD193062C5F8FF1006B55A4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				6A01854E2C5E838400E64875 /* AppDelegate.swift */,
 				6A0185502C5E838400E64875 /* SceneDelegate.swift */,
 				6A0185522C5E838400E64875 /* ViewController.swift */,
+				6AD193062C5F8FF1006B55A4 /* Alert.swift */,
 				6A0185542C5E838400E64875 /* Main.storyboard */,
 				6A0185572C5E838500E64875 /* Assets.xcassets */,
 				6A0185592C5E838500E64875 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				6A0185532C5E838400E64875 /* ViewController.swift in Sources */,
 				6A01854F2C5E838400E64875 /* AppDelegate.swift in Sources */,
+				6AD193072C5F8FF1006B55A4 /* Alert.swift in Sources */,
 				6A0185512C5E838400E64875 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
